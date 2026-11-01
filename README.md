@@ -1,6 +1,6 @@
-I'm Lingeshkanna, a software engineer in Madurai, India. I build mobile and web products across learning, agriculture, shopping, recipes, and plant care.
+I'm Lingeshkanna, a software engineer in Madurai, India. I build mobile and web products for learning, agriculture, shopping, recipes, and plant care.
 
-Most of my work is in React Native, Swift, Node.js, and PostgreSQL. I enjoy making features straightforward to use and reliable in day-to-day use.
+Most of my mobile work is in React Native and Swift, with Node.js and PostgreSQL across web and backend. I care about clear user flows, reliable performance, and the details that make a product easy to use.
 
 ## Things I've built
 
@@ -18,10 +18,6 @@ Most of my work is in React Native, Swift, Node.js, and PostgreSQL. I enjoy maki
 - Design around a clear user flow.
 - Build features across mobile and web.
 - Test the experience, fix performance issues, and polish the details.
-
-## Education
-
-B.Sc. in Information Technology · The American College, Madurai · 2022–2025
 
 ## Reach me
 
