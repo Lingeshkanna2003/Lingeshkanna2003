@@ -20,3 +20,7 @@ I work with React Native, Swift, Node.js, and PostgreSQL, building mobile and we
 ## Education
 
 B.Sc. in Information Technology · The American College, Madurai · 2022–2025
+
+## Reach me
+
+Madurai, India · [Portfolio](https://lingeshkanna-portfolio.web.app/) · [LinkedIn](https://www.linkedin.com/in/lingeshkanna/) · [Email](mailto:kannalingesh416@gmail.com)
