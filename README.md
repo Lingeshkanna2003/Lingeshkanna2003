@@ -1,6 +1,5 @@
-<div align="center">
-  <img src="assets/profile-banner.gif" alt="Lingeshkanna N K — software engineer in Madurai building mobile and web products" width="100%" />
-</div>
+<h1 align="center">Lingeshkanna N K</h1>
+<p align="center">Software Engineer · Madurai, India</p>
 
 <div align="center">
   <a href="https://lingeshkanna-portfolio.web.app/"><img src="assets/link-portfolio.svg" alt="Portfolio" height="42" /></a>
@@ -12,7 +11,7 @@
 
 <br />
 
-I’m a software engineer in Madurai, India, working across mobile and web. My recent work spans interactive learning, agricultural resources, shopping, recipes, and plant care. I enjoy seeing a feature through from the first design to implementation and QA.
+I work with React Native, Swift, Node.js, and PostgreSQL to build mobile and web products. My recent work spans interactive learning, agricultural resources, shopping, recipes, and plant care. I enjoy taking features from design through implementation and QA.
 
 ## Selected work
 
