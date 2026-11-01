@@ -22,12 +22,34 @@ jobs:
         with:
           script: |
             const issue = context.payload.issue;
+            const words = [
+              { word: "ASYNC", clue: "The JavaScript keyword that lets a function use await." },
+              { word: "CACHE", clue: "A fast copy of data kept for future use." },
+              { word: "CLOUD", clue: "Computing resources delivered over the internet." },
+              { word: "DEBUG", clue: "The process of finding and fixing errors." },
+              { word: "EVENT", clue: "A signal that something has happened." },
+              { word: "MERGE", clue: "Combine changes from different branches." },
+              { word: "PATCH", clue: "A small code change that fixes or improves something." },
+              { word: "QUERY", clue: "A request for specific data." },
+              { word: "QUEUE", clue: "A first-in, first-out collection of work." },
+              { word: "REACT", clue: "A JavaScript library for building user interfaces." },
+              { word: "STATE", clue: "Data that changes and can update an interface." },
+              { word: "STACK", clue: "A last-in, first-out collection of items." },
+              { word: "SWIFT", clue: "Apple's programming language for its platforms." },
+              { word: "TRACE", clue: "A record used to follow a request through a system." }
+            ];
+            const day = Math.floor(Date.parse(issue.created_at) / 86400000);
+            const entry = words[(issue.number * 7 + day) % words.length];
+
             await github.rest.issues.createComment({
               ...context.repo,
               issue_number: issue.number,
               body: [
-                "🧩 **Round started.** Comment one five-letter software word per guess.",
+                "🧩 **Round started.**",
                 "",
+                `**Clue:** ${entry.clue}`,
+                "",
+                "Comment one five-letter word per guess.",
                 "🟩 Right letter, right place · 🟨 In the word, wrong place · ⬛ Not in the word",
                 "",
                 "You have six guesses. Only the person who opened the round can play."
