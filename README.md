@@ -1,4 +1,4 @@
-I'm Lingeshkanna, a software engineer and Information Technology graduate from The American College in Madurai. I build mobile and web products for learning, agriculture, shopping, recipes, and plant care.
+I'm Lingeshkanna, an Information Technology graduate from The American College in Madurai. I build mobile and web products for learning, agriculture, shopping, recipes, and plant care.
 
 Most of my mobile work is in React Native and Swift, with Node.js and PostgreSQL across web and backend. I care about clear user flows, reliable performance, and the details that make a product easy to use.
 
