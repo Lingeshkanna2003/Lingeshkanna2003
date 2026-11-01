@@ -1,0 +1,128 @@
+name: Codeword
+
+on:
+  issues:
+    types: [opened]
+  issue_comment:
+    types: [created]
+
+permissions:
+  issues: write
+
+concurrency:
+  group: codeword-${{ github.event.issue.number }}
+  cancel-in-progress: false
+
+jobs:
+  start-round:
+    if: github.event_name == 'issues' && startsWith(github.event.issue.title, 'Codeword:')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const issue = context.payload.issue;
+            await github.rest.issues.createComment({
+              ...context.repo,
+              issue_number: issue.number,
+              body: [
+                "🧩 **Round started.** Comment one five-letter software word per guess.",
+                "",
+                "🟩 Right letter, right place · 🟨 In the word, wrong place · ⬛ Not in the word",
+                "",
+                "You have six guesses. Only the person who opened the round can play."
+              ].join("\n")
+            });
+
+  play-round:
+    if: github.event_name == 'issue_comment' && startsWith(github.event.issue.title, 'Codeword:')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/github-script@v7
+        with:
+          script: |
+            const { owner, repo } = context.repo;
+            const issue = context.payload.issue;
+            const comment = context.payload.comment;
+
+            if (comment.user?.login !== issue.user?.login) return;
+
+            const guess = (comment.body || "").trim().toUpperCase();
+            if (!/^[A-Z]{5}$/.test(guess)) {
+              await github.rest.issues.createComment({
+                owner,
+                repo,
+                issue_number: issue.number,
+                body: "Please comment with one five-letter word using letters only, like `SWIFT`."
+              });
+              return;
+            }
+
+            const { data: comments } = await github.rest.issues.listComments({
+              owner,
+              repo,
+              issue_number: issue.number,
+              per_page: 100
+            });
+
+            const guesses = comments
+              .filter((item) => item.user?.login === issue.user?.login)
+              .map((item) => (item.body || "").trim().toUpperCase())
+              .filter((item) => /^[A-Z]{5}$/.test(item));
+
+            const words = [
+              "ASYNC", "CACHE", "CLOUD", "DEBUG", "EVENT", "MERGE", "PATCH",
+              "QUERY", "QUEUE", "REACT", "STATE", "STACK", "SWIFT", "TRACE"
+            ];
+            const day = Math.floor(Date.parse(issue.created_at) / 86400000);
+            const target = words[(issue.number * 7 + day) % words.length];
+
+            const remaining = target.split("");
+            const marks = Array(5).fill("⬛");
+
+            for (let i = 0; i < 5; i += 1) {
+              if (guess[i] === target[i]) {
+                marks[i] = "🟩";
+                remaining[i] = "";
+              }
+            }
+
+            for (let i = 0; i < 5; i += 1) {
+              if (marks[i] === "⬛") {
+                const match = remaining.indexOf(guess[i]);
+                if (match !== -1) {
+                  marks[i] = "🟨";
+                  remaining[match] = "";
+                }
+              }
+            }
+
+            const attempt = guesses.length;
+            const solved = guess === target;
+            const outOfGuesses = attempt >= 6;
+            let result;
+
+            if (solved) {
+              result = `🎉 Solved in ${attempt}/6 guesses. The word was **${target}**.`;
+            } else if (outOfGuesses) {
+              result = `Round over — the word was **${target}**. Start another round from the profile README.`;
+            } else {
+              result = `${6 - attempt} guesses left.`;
+            }
+
+            await github.rest.issues.createComment({
+              owner,
+              repo,
+              issue_number: issue.number,
+              body: `**${guess}**\n\n${marks.join("")}\n\n${result}`
+            });
+
+            if (solved || outOfGuesses) {
+              await github.rest.issues.update({
+                owner,
+                repo,
+                issue_number: issue.number,
+                state: "closed",
+                state_reason: "completed"
+              });
+            }
