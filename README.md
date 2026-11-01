@@ -23,12 +23,6 @@ At Adhish Technologies, I work on mobile and web products across React Native, S
 | **FullMeals** | Recipe discovery and video-to-recipe | [Website](https://fullmeals.com/) |
 | **MockRounds** | Interactive quizzes; during my internship I worked on features, debugging, and testing | [Website](https://mockrounds.com/) |
 
-## Play
-
-<a href="https://github.com/Lingeshkanna2003/Lingeshkanna2003/issues/new?template=codeword.yml">
-  <img src="assets/codeword-board.svg" alt="A clickable Codeword game board. Click to start a six-guess software word puzzle." width="100%" />
-</a>
-
 ## Education
 
 B.Sc. in Information Technology · The American College, Madurai · 2022–2025
