@@ -45,7 +45,7 @@ jobs:
             const issue = context.payload.issue;
             const comment = context.payload.comment;
 
-            if (comment.user?.login !== issue.user?.login) return;
+            if (issue.state !== "open" || comment.user?.login !== issue.user?.login) return;
 
             const guess = (comment.body || "").trim().toUpperCase();
             if (!/^[A-Z]{5}$/.test(guess)) {
@@ -65,10 +65,18 @@ jobs:
               per_page: 100
             });
 
-            const guesses = comments
-              .filter((item) => item.user?.login === issue.user?.login)
-              .map((item) => (item.body || "").trim().toUpperCase())
-              .filter((item) => /^[A-Z]{5}$/.test(item));
+            const validComments = comments.filter((item) =>
+              item.user?.login === issue.user?.login &&
+              /^[A-Z]{5}$/.test((item.body || "").trim().toUpperCase())
+            );
+
+            if (!validComments.some((item) => item.id === comment.id)) {
+              validComments.push(comment);
+            }
+
+            const guesses = validComments.map((item) =>
+              (item.body || "").trim().toUpperCase()
+            );
 
             const words = [
               "ASYNC", "CACHE", "CLOUD", "DEBUG", "EVENT", "MERGE", "PATCH",
