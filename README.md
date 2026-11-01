@@ -1,4 +1,6 @@
-I work with React Native, Swift, Node.js, and PostgreSQL, building mobile and web products across learning, agriculture, shopping, recipes, and plant care.
+I'm Lingeshkanna, a software engineer in Madurai, India. I build mobile and web products across learning, agriculture, shopping, recipes, and plant care.
+
+Most of my work is in React Native, Swift, Node.js, and PostgreSQL. I enjoy making features straightforward to use and reliable in day-to-day use.
 
 ## Things I've built
 
