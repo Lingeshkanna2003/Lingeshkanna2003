@@ -13,7 +13,9 @@ I work with React Native, Swift, Node.js, and PostgreSQL, building mobile and we
 
 ## How I work
 
-I take features from design through implementation and QA, then refine the details that improve usability and performance.
+- Design around a clear user flow.
+- Build features across mobile and web.
+- Test the experience, fix performance issues, and polish the details.
 
 ## Education
 
