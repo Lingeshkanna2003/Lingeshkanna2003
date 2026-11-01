@@ -1,4 +1,4 @@
-I work with React Native, Swift, Node.js, and PostgreSQL to build mobile and web products. My recent work spans interactive learning, agricultural resources, shopping, recipes, and plant care. I enjoy taking features from design through implementation and QA.
+I work with React Native, Swift, Node.js, and PostgreSQL, building mobile and web products across learning, agriculture, shopping, recipes, and plant care.
 
 ## Things I've built
 
@@ -10,6 +10,10 @@ I work with React Native, Swift, Node.js, and PostgreSQL to build mobile and web
 | [FullMeals](https://fullmeals.com/) | Recipe discovery and video-to-recipe | Redesigned the site, added new features, and created an SEO-optimized section. |
 | [Sweet’N’Spicy](https://fullmeals.com/sweetnspicy) | Indian recipe app for [iOS](https://apps.apple.com/app/sweetnspicy-indian-recipes/id393738867) and [Android](https://play.google.com/store/apps/details?id=com.sweetnspicy.recipes) | Redesigned the app, added new features, and fixed performance issues. |
 | [GrowPls](https://growpls.app/) | Plant care across web and mobile ([iOS](https://apps.apple.com/app/growpls-plant-care-ai/id6817094159) · [Android](https://play.google.com/store/search?q=GrowPls&c=apps)) | Designed and built a new product page. |
+
+## How I work
+
+I take features from design through implementation and QA, then refine the details that improve usability and performance.
 
 ## Education
 
