@@ -23,11 +23,11 @@ At Adhish Technologies, I work on mobile and web products across React Native, S
 | **FullMeals** | Recipe discovery and video-to-recipe | [Website](https://fullmeals.com/) |
 | **MockRounds** | Interactive quizzes; during my internship I worked on features, debugging, and testing | [Website](https://mockrounds.com/) |
 
-## Play: Codeword
+## Play
 
-Solve a five-letter software word from a clue. Comment one guess at a time; you get six tries and letter-by-letter feedback.
-
-[Start a round →](https://github.com/Lingeshkanna2003/Lingeshkanna2003/issues/new?template=codeword.yml)
+<a href="https://github.com/Lingeshkanna2003/Lingeshkanna2003/issues/new?template=codeword.yml">
+  <img src="assets/codeword-board.svg" alt="A clickable Codeword game board. Click to start a six-guess software word puzzle." width="100%" />
+</a>
 
 ## Education
 
