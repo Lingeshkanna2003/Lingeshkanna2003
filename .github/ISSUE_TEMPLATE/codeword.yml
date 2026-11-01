@@ -1,9 +1,0 @@
-name: Codeword
-description: A quick five-letter coding challenge.
-title: "Codeword: new round"
-body:
-  - type: markdown
-    attributes:
-      value: |
-        Guess the hidden five-letter software word by commenting one guess per message.
-        You have six guesses. I’ll mark correct letters and positions after each one.
