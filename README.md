@@ -13,7 +13,7 @@
 
 I work with React Native, Swift, Node.js, and PostgreSQL to build mobile and web products. My recent work spans interactive learning, agricultural resources, shopping, recipes, and plant care. I enjoy taking features from design through implementation and QA.
 
-## Selected work
+## Things I've built
 
 | Project | Product | My contribution |
 | --- | --- | --- |
