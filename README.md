@@ -25,4 +25,4 @@ B.Sc. in Information Technology · The American College, Madurai · 2022–2025
 
 ## Reach me
 
-Madurai, India · [Portfolio](https://lingeshkanna-portfolio.web.app/) · [LinkedIn](https://www.linkedin.com/in/lingeshkanna/) · [Email](mailto:kannalingesh416@gmail.com)
+Madurai, India · [Portfolio](https://lingeshkanna-portfolio.web.app/) · [LinkedIn](https://www.linkedin.com/in/lingeshkanna/) · [kannalingesh416@gmail.com](mailto:kannalingesh416@gmail.com)
