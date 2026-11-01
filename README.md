@@ -25,7 +25,7 @@ At Adhish Technologies, I work on mobile and web products across React Native, S
 
 ## Play: Codeword
 
-Guess the five-letter software word. Comment one guess at a time for letter clues; you get six tries.
+Solve a five-letter software word from a clue. Comment one guess at a time; you get six tries and letter-by-letter feedback.
 
 [Start a round →](https://github.com/Lingeshkanna2003/Lingeshkanna2003/issues/new?template=codeword.yml)
 
