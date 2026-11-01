@@ -1,16 +1,3 @@
-<h1 align="center">Lingeshkanna N K</h1>
-<p align="center">Software Engineer · Madurai, India</p>
-
-<div align="center">
-  <a href="https://lingeshkanna-portfolio.web.app/"><img src="assets/link-portfolio.svg" alt="Portfolio" height="42" /></a>
-  &nbsp;
-  <a href="https://www.linkedin.com/in/lingeshkanna/"><img src="assets/link-linkedin.svg" alt="LinkedIn" height="42" /></a>
-  &nbsp;
-  <a href="mailto:kannalingesh416@gmail.com"><img src="assets/link-email.svg" alt="Email" height="42" /></a>
-</div>
-
-<br />
-
 I work with React Native, Swift, Node.js, and PostgreSQL to build mobile and web products. My recent work spans interactive learning, agricultural resources, shopping, recipes, and plant care. I enjoy taking features from design through implementation and QA.
 
 ## Things I've built
